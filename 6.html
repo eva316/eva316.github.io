@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>FamShare!!!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+ <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" href="FamShare.css"/>
+<link href="FamShare.css"/>
+	<script src="tabletop1.3.4.js"></script>
+ 
+
+
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+</head>
+
+
+
+<body>
+
+<!--FamShare homepage-->
+<div data-role="page" id="homepage">
+<div data-role="header" style="background-color: white; padding:30px">
+<div style="font-size: 50px; color: #00ADF4; padding: 30px; float: left; ">FamShare</div>
+<img id="logo" src="famshare WOB.jpg"  style="height:100px; float: left; width = 100px"/>
+<div style="padding:50px"><a type="button" href="#login"  class="ui-btn ui-btn-inline" style="font-size30px; float: right":>Login</a></div> 
+</div>
+
+<div style="padding:40px">
+<center><div style = "padding: 20px; font-size: 40px">
+Our Mission
+</div>
+<div style="font-size:30px; padding:5px">
+""
+</div>
+</div>
+</center>
+
+<div style="padding:40px">
+<center><div style = "padding: 20px; font-size: 40px">
+The Creators
+</div>
+<div style= "float: left; width: 45%">
+<div style="font-size:30px; padding:5px;  width: 45%">
+Eva Denman
+</div>
+	<div style="font-size:20px; padding:5px;  width: 45%">
+	bjhfhdjfhdjfkljdklfjkldjfkjdkf
+	</div>
+</div>
+<div style="float: right; width: 45%">
+<div style="font-size:30px; padding:5px;  width: 45%">
+Maya Berkeley
+</div>
+	<div style="font-size:20px; padding:5px;  width: 45%">
+	dhfhdsjfhkdhfkjdhfhdfhjdfhjkdhfjkdhjfhjd
+	</div>
+</div>
+</div>
+
+</center>
+
+<center><div style="padding: 100px"><a type="button" href="#login"  class="ui-btn ui-btn-inline" style="font-size30px":>Login</a></div><center>
+
+
+</div>
+
+
+
+
+<!--Login page:-->
+<div data-role="page" id="login" style = "background-color : white" >
+	<div data-role="header" ><h1>FamShare</h1></div>
+
+
+<div><center>
+
+
+<h1 style="margin=50px; color: #00ADF4">Login<h1>
+
+<!--
+
+<a href="#profile" class="ui-btn" onclick="submit()" >Go</a>
+
+-->
+
+<fieldset>
+<input type="text" id="user" /><br />
+<input type="password" id="password" /><br />
+<input type="button" value="Submit" onClick="login();" />
+<p id="result"></p>
+</fieldset>
+
+</center></div>
+
+</div>
+
+
+
+<!-- CALENDAR page: -->
+
+<div data-role="page" id="calendar" style = "background-color : white">
+
+<div data-role="header" style = "background-color : white; float : left; padding : 20px">
+<div style = "font-size:30px; color: #00ADF4; float: left; padding: 10px">Calendar</div>
+<img id="logo" src="cal.jpg"  style="height:50px;  float: left; width = 100px"/></div>
+<div>
+
+
+<div data-role="navbar" data-grid="c">
+<ul>
+   	 <li data-role="content"><a href="#profile" >Me</a></li>
+   	 <li ><a href="#feed2">Feed</a></li>
+   	 <li><a href="#calendar" class="ui-btn-active">Calendar</a></li>
+   	 <li><a href="#" >Location</a></li>
+   	 
+
+    </ul>
+    </div>
+    
+    <center><iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=rdgludlar5je49002s1949p920%40group.calendar.google.com&amp;color=%23333333&amp;ctz=America%2FLos_Angeles" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe><center>
+    
+    <!--Calendar Info Buttons-->
+
+<div id="form" class="contact-us-form">
+	<div class="title">
+
+</div>
+
+
+<label for="text-basic"></label>
+
+<!--<a target="_blank" href="https://www.google.com/calendar/event?action=TEMPLATE&tmeid=YjgwY2E1NXA2OGFucmIyNzBxMGxnODdkMjggcmRnbHVkbGFyNWplNDkwMDJzMTk0OXA5MjBAZw&tmsrc=rdgludlar5je49002s1949p920%40group.calendar.google.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"></a>-->
+
+Title
+<input type="text" name="text-basic" id="inputTitle" value="">
+Location
+<input type="text" name="text-basic" id="inputLocation" value="">
+Start: Date & Time
+<input type="text" name="text-basic" id="inputTime" value="">
+End: Date & Time
+
+<input type="text" name="text-basic" id="inputDate" value="" data-role="date" data-inline="true">
+
+* date: 00/00/0000, time: 00:00:00
+
+ <input onclick= "postContactToGoogle2()" type="submit" value="Submit">
+
+
+ </div>
+
+<center><div><a href="#login" class="ui-btn ui-btn-inline">Logout</a></div></center>
+    
+</div>
+
+	
+
+<!-- FEED Page: -->
+<div data-role="page" id = "feed2" style = "background-color : white" >
+<div data-role="header" style = "background-color : white; float : left; padding : 20px">
+<div style = "font-size:30px; color: #00ADF4; float: left; padding: 10px">Feed</div>
+<img id="logo" src="hot.jpg"  style="height:50px;  float: left; width = 100px"/></div>
+<div>
+
+
+<div data-role="navbar" data-grid="c">
+	<ul>
+    	<li data-role="content"><a href="#profile" class="ui-btn-active">Me</a></li>
+    	<li ><a href="#feed2">Feed</a></li>
+    	<li><a href="#calendar" >Calendar</a></li>
+    	<li><a href="#" >Location</a></li>
+    	
+
+	</ul>
+	</div>
+	
+<div id="form" class="contact-us-form" >
+    <div class="title" >
+
+
+</div>
+
+
+<label for="text-basic"></label>
+<input type="text" name="text-basic" id="textInput" value="">
+<input type="text" name="text-basic" id="currentUser" value="">
+
+
+
+
+
+
+ 
+<!--post button-->	
+
+
+
+
+<div class="ui-nodisc-icon ui-alt-icon" style="width: 100%; display: block; float: right;">
+<center><a onclick= "postContactToGoogle()", id="send" type="submit"class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext ui-btn-inline">Plus</a></center>
+</div>
+</div>
+
+<div style = "width: 1500px; overflow: auto; padding: 20px; background-color: #ADD8E6;">
+	<div id = "div0" style = " float:left; width: 70%; margin: 0; padding: 0 3% 0 0; background-color: #00ADF4"></div>
+	<div id = "div1" style = "width: 30%; float: right; padding: 0 3% 0 0; margin: 0;  background-color: #00ADF4"></div>
+
+
+
+</div>
+
+
+</div>
+	
+</div>
+<div id = "div2" style = "color: #00ADF4">
+	<img id="sharedPhoto" src="#"  style="height:200px; width = 200px"/></div>
+
+</div>
+<!--if current user entered form, then display something-->
+
+<!-- PROFILE Settings Page: -->
+<div data-role="page"  id="profile" style = "background-color : white">
+
+<div data-role="header" style = "background-color : white; float : left; padding : 20px">
+<div style = "font-size:30px; color: #00ADF4; float: left; padding: 10px">Profile Settings</div>
+<img id="logo" src="prof.jpg"  style="height:50px;  float: left; width = 100px"/></div>
+<div>
+
+<center>
+<div data-role="navbar" data-grid="c">
+	<ul class = "tab-links"    >
+    	<li data-role="content"><a href="#profile" class="ui-btn-active">Me</a></li>
+    	<li data-role="content"><a href="#feed2">Feed</a></li>
+    	<li><a href="#calendar" >Calendar</a></li>
+    	<li><a href="#" >Location</a></li>
+	</ul>
+	
+</div>
+
+
+<div  id="profileName" style = "font-size: 40px; background-color: white "><center>
+<script>
+
+var users = new Array();
+var passwords = new Array();
+
+	users.push("Eva Denman");
+	passwords.push("Fam");
+	users.push("Maya Berkeley");
+	passwords.push("Share");
+	users.push("user3");
+	passwords.push("pass3");
+
+		for (var i = 0; i<users.length; i++){
+				if(document.getElementById("user").value == users[i]){
+	//displayName()
+				
+				document.write(users[i]);
+				console.log(users[i]);	
+			}}
+		
+			
+
+
+		
+		
+</script>
+
+</center></div>
+
+
+<!--profile pic box-->
+<p>
+    <center><div id = "profilePic" style="width: 200px; background-color: grey;height: 200px" >
+   
+
+		<img id="EImg" src="faceProfile.jpg"  style="height:200px; width = 200px"/>
+		<div id = "mayaBox">
+		<img id="MImg" src="spongebob.png"  style="height:200px; width = 100px"/>
+	
+	
+		</div>
+		
+		<script>
+		 	if (document.getElementById("user").value == users[0]){
+		 			console.log(users[0]);
+		 		
+		 		
+		 		document.getElementById("profilePic").innerHTML = "<img id='EImg' src='faceProfile.jpg'  style='height:200px; width = 200px'/>";
+		 		
+		 		}
+		 		
+		 	if (document.getElementById("user").value == users[1]){
+		 			console.log(users[1]);
+		 		
+		 	
+		 		document.getElementById("profilePic").innerHTML = "<img id='MImg' src='1536624_648711411839486_1500490682_n.jpg'  style='height:200px; width = 100px'/>";
+		 		
+		 			
+		 	}
+		 		
+		</script>
+		
+		<div></div>
+
+    </div></center>
+    
+</p>
+
+
+
+
+
+
+
+<!--upload button-->
+<input type='file' />
+
+</form>
+<div><center>
+<div><a href="#login" class="ui-btn ui-btn-inline">Logout</a></div>
+</div>
+
+
+<script src="FamShare2.js"></script>
+</body>
+
+
+
+</html>
+
